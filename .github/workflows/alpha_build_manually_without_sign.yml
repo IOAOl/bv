@@ -26,10 +26,6 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Write google-services.json
-        env:
-          DATA: ${{ github.event.inputs.google_services_json }}
-        run: echo -e $DATA > app/google-services.json
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
